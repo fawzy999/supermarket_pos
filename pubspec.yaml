@@ -1,0 +1,64 @@
+name: supermarket_codex_v23
+description: سوبر ماركت Codex - نظام نقاط بيع بدون سيرفر، بموديولات قابلة للتفعيل
+publish_to: 'none'
+version: 1.0.0+24
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # قاعدة البيانات المحلية
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  path_provider: ^2.1.0
+
+  # قارئ الباركود بالكاميرا (المرحلة 2)
+  mobile_scanner: ^5.0.0
+  # اختيار لوجو المحل من المعرض
+  image_picker: ^1.1.2
+  # إنشاء ومشاركة فاتورة PDF
+  pdf: ^3.11.1
+  printing: ^5.13.4
+  share_plus: ^10.1.2
+  # تشفير كلمات السر
+  crypto: ^3.0.5
+  # اختيار ملف النسخة الاحتياطية عند الاستيراد
+  file_picker: ^8.1.4
+  # توليد رسمة الباركود للطباعة
+  barcode: ^2.2.8
+  # عرض الباركود على الشاشة مباشرة
+  barcode_widget: ^2.0.4
+  # فتح محادثة واتساب مباشرة برقم/نص محدد
+  url_launcher: ^6.3.1
+  # طلبات إنترنت (تحليل AI / أي API خارجي)
+  http: ^1.2.2
+  # إرسال إيميلات SMTP (التقارير التلقائية للمدير)
+  mailer: ^6.1.2
+  # توقيع رقمي فعلي على السندات (عهدة/تسوية)
+  signature: ^5.5.0
+  # إشعارات محلية (تذكيرات مواعيد السداد وانتهاء المستندات)
+  flutter_local_notifications: ^17.2.3
+  # الدخول بالبصمة (كل كاشير يفعّل بصمته على الجهاز)
+  local_auth: ^2.3.0
+  # صوت نجاح/فشل قراءة الباركود في شاشة البيع
+  audioplayers: ^6.1.0
+
+  # هيتم إضافتهم في مراحل لاحقة من الخطة:
+  # shelf: ^1.4.0               -> السيرفر المحلي (المرحلة 5)
+  # shelf_router: ^1.1.4
+  # google_sign_in: ^6.2.0      -> النسخ الاحتياطي (المرحلة 6)
+  # cryptography: ^2.7.0        -> التوقيع الرقمي للترخيص (المرحلة 8)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/branding/codex_logo.png
+    - assets/sounds/scan_success.wav
+    - assets/sounds/scan_error.wav
